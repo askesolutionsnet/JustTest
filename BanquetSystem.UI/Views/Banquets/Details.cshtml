@@ -1,0 +1,178 @@
+﻿@model BanquetSystem.Domain.CustomerDetailBDO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <h4>@ViewBag.Heading</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerTypesId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CustomerTypesId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mobile)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AddressLine1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AddressLine1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AddressLine2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AddressLine2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AddressLine3)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AddressLine3)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PostCode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PostCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CityName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CityName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CountryName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerEventDetails.CostPerHead)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerEventDetails.CostPerHead)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerEventDetails.Capacity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerEventDetails.Capacity)
+            </dd>
+      
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedBy)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedBy)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedDate)
+            </dd>
+
+            <br />
+            <dd>
+             @foreach (var item in Model.CustomerImages)
+             {
+                    <img class="img-responsive" src="@Url.Content(@item.Image)" alt="" style="width:200px;height:200px" />
+             }
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
